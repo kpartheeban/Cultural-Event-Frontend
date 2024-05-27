@@ -1,0 +1,26 @@
+<app-nav-bar-login id="n"></app-nav-bar-login>
+<body>
+  <div id="container">
+    <header>log In</header>
+    <form [formGroup]="loginForm" (ngSubmit)="login()">
+      <fieldset>
+        <br />
+        <input type="email" name="email" id="email" formControlName="emailId" placeholder="Student Email" required autofocus>
+        <div *ngIf="loginForm.get('emailId')?.invalid && (loginForm.get('emailId')?.dirty || loginForm.get('emailId')?.touched)">
+          <div *ngIf="loginForm.get('emailId')?.errors?.['required']">Email is required.</div>
+          <div *ngIf="loginForm.get('emailId')?.errors?.['email']">Invalid email format.</div>
+        </div>
+        <br><br>
+        <input type="password" name="password" id="password" formControlName="password" placeholder="Password" required>
+        <div *ngIf="loginForm.get('password')?.invalid && (loginForm.get('password')?.dirty || loginForm.get('password')?.touched)">
+          <div *ngIf="loginForm.get('password')?.errors?.['required']">Password is required.</div>
+        </div>
+        <br /><br />
+        <label for="submit"></label>
+        <button type="submit" [disabled]="loginForm.invalid" class="login-btn" >Log In</button>
+        <label for="submit"></label>
+        <button routerLink="/" class="login-btn" >Back</button>
+      </fieldset>
+    </form>
+  </div>
+</body>

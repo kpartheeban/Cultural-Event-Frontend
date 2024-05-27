@@ -1,0 +1,13 @@
+<app-nav-bar-admin></app-nav-bar-admin>
+<body background="https://static.vecteezy.com/system/resources/previews/001/309/407/non_2x/top-view-of-a-workspace-on-a-blue-desk-free-photo.jpg">
+  <form class="login">
+    <h2>Admin Login</h2>
+      
+    <input  type="text" name="username" class="text-field" placeholder="AdminId" [(ngModel)]="EmailId" [ngModelOptions]="{standalone:true}" />
+    <input  type="password" name="password" class="text-field" placeholder="Password" [(ngModel)]="Password" [ngModelOptions]="{standalone:true}" />
+  
+    <a><input type="button" (click)="adminlogin()" class="button" value="Log In" /></a>
+  
+  </form>  
+</body>
+

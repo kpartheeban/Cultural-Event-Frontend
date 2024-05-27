@@ -1,0 +1,31 @@
+<body>
+  <div class="add-event-form">
+    <h2>Update Event</h2>
+    <form>
+      <div class="form-group">
+        <label for="eventId">Event Id</label>
+        <input type="text" id="eventId" name="eventId" [(ngModel)]="eventId" [ngModelOptions]="{standalone:true}" required>
+      </div>
+      <div class="form-group">
+        <label for="eventName">Event Name</label>
+        <input type="text" id="eventName" name="eventName" [(ngModel)]="eventName" [ngModelOptions]="{standalone:true}" required>
+      </div>
+      <div class="form-group">
+        <label for="venue">Venue</label>
+        <input type="text" id="venue" name="venue" [(ngModel)]="venue" [ngModelOptions]="{standalone:true}" required>
+      </div>
+      <div class="form-group">
+        <label for="venue">Description</label>
+        <textarea cols="30" rows="4" id="venue" name="venue" [(ngModel)]="description" [ngModelOptions]="{standalone:true}" required></textarea>
+      </div>
+      <div class="form-group">
+        <label for="venue">Image</label>
+        <input type="text" id="venue" name="venue" [(ngModel)]="image" [ngModelOptions]="{standalone:true}" required>
+      </div>
+      <div class="form-group">
+        <button type="submit" (click)="updateEvents()" class="btn">Update Event</button>
+        <button type="button" routerLink="/admin/admin-dashboard" class="btn btn-cancel">Cancel</button>
+      </div>
+    </form>
+  </div>
+</body>

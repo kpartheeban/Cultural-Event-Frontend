@@ -1,0 +1,34 @@
+<body>
+  <button routerLink="/home">Back</button>
+  <br>
+  <br>
+  <label for="pass">Check Pass</label>
+  <input type="text" id="pass" name="pass" [(ngModel)]="pass" [ngModelOptions]="{standalone:true}" placeholder="Enter your Registered Student Id ">
+  <button (click)="viewPass()">View Pass</button>
+  <br>
+  <div *ngIf="studentDetails">
+    <h2>Student Details</h2>
+    <table class="table" id="tableToDownload" >
+      <thead>
+        <tr>
+          
+          <th>Student ID</th>
+          <th>Name</th>
+          <th>Event ID</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let detail of studentDetails" >
+       
+          <td>{{ detail.studentId }}</td>
+          <td>{{ detail.name }}</td>
+          <td>{{ detail.eventId }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div> 
+  
+  <button (click)="downloadTablePDF()">Download as PDF</button>
+
+
+  </body>

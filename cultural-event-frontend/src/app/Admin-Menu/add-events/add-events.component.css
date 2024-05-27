@@ -1,0 +1,67 @@
+body{
+  background-image: url(https://static.vecteezy.com/system/resources/previews/007/126/325/large_2x/red-paper-plane-out-of-line-with-white-paper-to-change-disrupt-and-finding-new-normal-way-on-blue-background-lift-and-business-creativity-new-idea-to-discovery-innovation-technology-by-3d-rendering-free-photo.jpg);
+  background-size: cover;
+  height: 38rem;
+}
+
+.add-event-form {
+  color: green;
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgba(255,255,255,0.1);
+    border-radius: 5px;
+  }
+
+  .ip{
+    border-radius: 20px;
+  }
+
+  #venue{
+    border-radius: 20px;
+  }
+  
+  #eventName{
+    border-radius: 20px;
+  }
+
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  input[type="text"],
+  input[type="date"],
+  input[type="time"],
+  textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  
+  textarea {
+    resize: vertical;
+  }
+  
+  .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color:green;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .btn-cancel {
+    background-color: #ccc;
+    color: green;
+    margin-left: 10px;
+  }

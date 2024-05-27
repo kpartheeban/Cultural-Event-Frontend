@@ -1,0 +1,152 @@
+html {
+    
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    background-image: url(https://static.vecteezy.com/system/resources/previews/037/354/433/large_2x/ai-generated-music-recording-studio-in-the-dark-free-photo.jpg);
+    background-color: #FF0000;
+    background-size: cover;
+    font-family: 'Droid Serif', serif;
+    margin: auto;
+    height: 85rem;
+}
+
+.alert{
+    color: #FF0000;
+    font-style: italic;
+}
+
+#container {
+    /* background: rgba(3, 3, 55, 0.5); */
+    font-weight: bold;
+    width: 18.75rem;
+    height: 40rem;
+    margin: auto;
+    position:inherit;
+    top: 25%;
+    left: 40%;
+    /* right: 50%; */
+    /* bottom: 50%; */
+}
+
+header {
+    text-align: center;
+    vertical-align: middle;
+    line-height: 3rem;
+    height: 3rem;
+    background: rgba(3, 3, 55, 0.7);
+    font-size: 1.4rem;
+    color: #d3d3d3;
+}
+
+fieldset {
+    border: 0;
+    text-align: left;
+}
+
+
+
+input {
+    background: transparent;
+    border: 0;
+    border-left: 4px solid;
+    border-color: #FF0000;
+    padding: 10px;
+    color: white;
+    font-weight: bold;
+}
+
+
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus {
+    outline: 0;
+    background: rgba(235, 30, 54, 0.3);
+    border-radius: 1.2rem;
+    border-color: transparent;
+}
+
+::placeholder {
+    color: #d3d3d3;
+}
+
+.register-btn {
+    color: white;
+    background-color: red;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Add transition for smooth hover effect */
+  }
+  
+  .register-btn:hover {
+    background-color: darkred; /* Change the background color on hover */
+  }
+  
+  .register-btn:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+    opacity: 0.6;
+  }
+  
+  .register-btn:disabled:hover {
+    background-color: #ccc; /* Prevent hover effect when disabled */
+  }
+
+/*Media queries */
+
+@media all and (min-width: 481px) and (max-width: 568px) {
+    #container {
+        margin-top: 10%;
+        margin-bottom: 10%;
+    }
+}
+    @media all and (min-width: 569px) and (max-width: 768px) {
+        #container {
+            margin-top: 5%;
+            margin-bottom: 5%;
+        }
+    }
+
+
+    /* select */
+    select {
+        
+        appearance: none; /* Remove default dropdown arrow */
+        background: transparent;
+        border: 0;
+        border-left: 4px solid;
+        border-color: #FF0000;
+        padding: 10px;
+        color: white;
+        font-weight: bold;
+        /* justify-self: left; */
+      }
+      
+      /* Add custom dropdown arrow */
+      select {
+        /* background-image: url('data:image/svg+xml;utf8,<svg fill="%23ffffff" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/><path d="M0 0h24v24H0z" fill="none"/></svg>'); */
+        background-repeat: no-repeat;
+        background-position: calc(100% - 8px) center;
+        background-size: 16px;
+        padding-right: 32px; /* Adjust padding to accommodate the custom arrow */
+      }
+      
+      /* Style the dropdown options */
+      select option {
+        background-color:rgba(255,255,255,0.1);
+        color: black;
+        padding: 8px 12px;
+      }
+      
+      /* Style the selected option */
+      select option:checked {
+        background-color: rgba(255,255,255,0.1);
+        color: black;
+        
+      }
+      

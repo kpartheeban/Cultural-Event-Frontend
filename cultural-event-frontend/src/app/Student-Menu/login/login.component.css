@@ -1,0 +1,122 @@
+#id{
+    position: fixed;
+}
+
+html {
+    
+    height: 100%;
+    width: 100%;
+}
+
+#submit{
+    border-radius: 20%;
+}
+body {
+    background-image: url(https://static.vecteezy.com/system/resources/previews/024/569/689/large_2x/rock-music-concert-background-illustration-ai-generative-free-photo.jpg);
+    background-color: #FF0000;
+    background-size: cover;
+    font-family: 'Droid Serif', serif;
+    margin: auto;
+    height: 30rem;
+}
+
+#container {
+    background: rgba(3, 3, 55, 0.5);
+    border-radius: 0%;
+    width: 18.75rem;
+    height: 20rem;
+    margin: auto;
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    /* right: 50%; */
+    /* bottom: 50%; */
+    transform: translate(-50%, -50%);
+}
+
+header {
+    text-align: center;
+    vertical-align: middle;
+    line-height: 3rem;
+    height: 3rem;
+    background: rgba(3, 3, 55, 0.7);
+    font-size: 1.4rem;
+    color: #d3d3d3;
+}
+
+fieldset {
+    border: 0;
+    text-align: center;
+}
+
+input[type="submit"] {
+    background: rgba(235, 30, 54, 1);
+    border: 0;
+    display: block;
+    width: 70%;
+    margin: 0 auto;
+    color: white;
+    padding: 0.7rem;
+    cursor: pointer;
+}
+
+input {
+    background: transparent;
+    border: 0;
+    border-left: 4px solid;
+    border-color: #FF0000;
+    padding: 10px;
+    color: white;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus {
+    outline: 0;
+    background: rgba(235, 30, 54, 0.3);
+    border-radius: 1.2rem;
+    border-color: transparent;
+}
+
+::placeholder {
+    color: #d3d3d3;
+}
+
+.login-btn {
+    color: white;
+    background-color: red;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Add transition for smooth hover effect */
+  }
+  
+  .login-btn:hover {
+    background-color: darkred; /* Change the background color on hover */
+  }
+  
+  .login-btn:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+    opacity: 0.6;
+  }
+  
+  .login-btn:disabled:hover {
+    background-color: #ccc; /* Prevent hover effect when disabled */
+  }
+
+/*Media queries */
+
+@media all and (min-width: 481px) and (max-width: 568px) {
+    #container {
+        margin-top: 10%;
+        margin-bottom: 10%;
+    }
+}
+    @media all and (min-width: 569px) and (max-width: 768px) {
+        #container {
+            margin-top: 5%;
+            margin-bottom: 5%;
+        }
+    }

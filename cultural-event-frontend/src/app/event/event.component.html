@@ -1,0 +1,43 @@
+
+<header style="background-color:black">
+  <nav>
+    <div class="logo">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTx09wWvXYdpfNIc-ZEuzzdsu4XI-POZmaoUKorS3jEDg&s">
+    </div>
+    <div class="items">
+      <a routerLink="/home">Student Dashboard</a>
+      <a routerLink="/admin" class="active">Events</a>
+      
+      
+    </div>
+
+    <div class="other">
+      <!-- <button (click)="logOut()">Log Out</button> -->
+    </div>
+  </nav>
+</header>
+
+<body class="bg">
+    <div class="container" >
+        <div class="row">
+          <div class="col-md-4" *ngFor="let e of events">
+            <div class="card">
+              <a>
+              <img [src]="e.image" alt="Card Image">
+              </a>
+              <div class="card-content">
+                <i>
+                  <!-- <p>{{e.image}}</p> -->
+                    <h3>Name:{{ e.eventName }}</h3>
+                    <h4>EventId : <b>{{ e.eventId }}</b></h4>
+                    <p>Venue: {{ e.venue }}</p>
+                    <p>Description:{{e.description}}</p>
+                    
+                </i>
+                <a  (click)="navigateToEventBooking(e.eventId, e.eventName)" class="btn">Register Now</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+</body>

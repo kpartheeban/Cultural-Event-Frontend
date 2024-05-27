@@ -1,0 +1,22 @@
+<table class="event-table" *ngIf="s5.length>0">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Student Id</th>
+        <th>Event Name</th>
+        <th>Event Id</th>
+       
+        
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let s of s5">
+        <td>{{ s.id }}</td>
+        <td>{{ s.studentId }}</td>
+        <td>{{ s.name }}</td>
+        <td>{{ s.eventId }}</td>
+      </tr>
+    </tbody>
+  </table>
+  <br>
+  <button class="my-button" routerLink="/admin-dashboard">Back</button>

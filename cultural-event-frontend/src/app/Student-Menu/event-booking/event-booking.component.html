@@ -1,0 +1,20 @@
+<app-nav-bar-event></app-nav-bar-event>
+<!-- <button routerLink="/event" class="back-button">Back</button> -->
+  <body>
+    <div id="container">
+      <header>Event Booking</header>
+      <form method="post">
+        <fieldset>
+          <br />
+          <input type="text" name="id" id="id"[(ngModel)]="studentId" [ngModelOptions]="{standalone:true}" placeholder="Student Id" required autofocus>
+          <br /><br />
+          <input type="text" id="name" name="name" [(ngModel)]="eventName" [ngModelOptions]="{standalone:true}" placeholder="Event Name" required>
+          <br /><br />
+          <input type="text" id="eventId" name="eventId" [(ngModel)]="eventId" [ngModelOptions]="{standalone:true}" placeholder="Event Id" required>
+          <br /><br /><br>
+          <label for="Book"></label>
+          <input type="submit" name="submit" (click)="eventBooking()" id="submit" value="Book">
+        </fieldset>
+      </form>
+    </div>
+  </body>

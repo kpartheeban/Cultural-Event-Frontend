@@ -1,0 +1,75 @@
+  <body>
+    <div id="container">
+      <header>Register new account</header>
+      <form [formGroup]="registerForm" (ngSubmit)="save()">
+        <fieldset>
+          <br />
+          <input type="text" name="id" id="id" formControlName="studentId" placeholder="Student Id" required autofocus>
+          <div *ngIf="registerForm.get('studentId')?.invalid && (registerForm.get('studentId')?.dirty || registerForm.get('studentId')?.touched)">
+            <div class="alert" *ngIf="registerForm.get('studentId')?.errors!['required']">Student ID is required.</div>
+          </div>
+          <br /><br />
+          <input type="text" name="name" id="name" formControlName="studentName" placeholder="Student Name" required>
+          <div *ngIf="registerForm.get('studentName')?.invalid && (registerForm.get('studentName')?.dirty || registerForm.get('studentName')?.touched)">
+            <div class="alert" *ngIf="registerForm.get('studentName')?.errors!['required']">Student Name is required.</div>
+          </div>
+          <br /><br />
+          <input type="email" name="email" id="email" formControlName="studentEmail" placeholder="Student Email" required>
+          <div *ngIf="registerForm.get('studentEmail')?.invalid && (registerForm.get('studentEmail')?.dirty || registerForm.get('studentEmail')?.touched)">
+            <div class="alert" *ngIf="registerForm.get('studentEmail')?.errors!['required']">Student Email is required.</div>
+            <div class="alert" *ngIf="registerForm.get('studentEmail')?.errors!['email']">Invalid email address.</div>
+          </div>
+          <br><br>
+          <input type="password" name="password" id="password" formControlName="password" placeholder="Password" required>
+          <div *ngIf="registerForm.get('password')?.invalid && (registerForm.get('password')?.dirty || registerForm.get('password')?.touched)">
+            <div class="alert" *ngIf="registerForm.get('password')?.errors!['required']">Password is required.</div>
+            <div class="alert" *ngIf="registerForm.get('password')?.errors!['minlength']">Password must be at least 6 characters long.</div>
+          </div>
+          <br /><br />
+          <input type="password" name="confirm-password" id="confirm-password" formControlName="confirmPassword" placeholder="Confirm Password" required>
+          <div *ngIf="registerForm.get('confirmPassword')?.invalid && (registerForm.get('confirmPassword')?.dirty || registerForm.get('confirmPassword')?.touched)">
+            <div class="alert" *ngIf="registerForm.get('confirmPassword')?.errors!['required']">Confirm Password is required.</div>
+            <div class="alert" *ngIf="registerForm.get('confirmPassword')?.errors!['mismatch']">Passwords do not match.</div>
+          </div>
+          <br /> <br />
+          <input type="tel" name="telephone" id="telephone" formControlName="phone" placeholder="Phone Number" required>
+          <div *ngIf="registerForm.get('phone')?.invalid && (registerForm.get('phone')?.dirty || registerForm.get('phone')?.touched)">
+            <div class="alert" *ngIf="registerForm.get('phone')?.errors!['required']">Phone Number is required.</div>
+            <div class="alert" *ngIf="registerForm.get('phone')?.errors!['pattern']">Invalid phone number format.</div>
+          </div>
+          <br /><br />
+
+          <select name="dept" id="dept" formControlName="dept" required>
+            <option class="opt" value="" disabled selected>Select Department</option>
+            <option class="opt" value="Aero">Aero</option>
+            <option class="opt" value="CSE">CSE</option>
+            <option class="opt" value="IT">IT</option>
+            <option class="opt" value="ECE">ECE</option>  
+            <option class="opt" value="EEE">EEE</option>
+            <option class="opt" value="MECH">MECH</option>    
+          </select>
+          <div *ngIf="registerForm.get('dept')?.invalid && (registerForm.get('dept')?.dirty || registerForm.get('dept')?.touched)">
+            <div class="alert" *ngIf="registerForm.get('dept')?.errors!['required']">Department is required.</div>
+          </div>
+          <br /><br />
+          
+          <select name="year" id="year" formControlName="year" required>
+            <option class="opt" value="" disabled selected>Select Year</option>
+            <option class="opt" value="I">I</option>
+            <option class="opt" value="II">II</option>
+            <option class="opt" value="III">III</option>  
+            <option class="opt" value="IV">IV</option>  
+          </select>
+          <div *ngIf="registerForm.get('year')?.invalid && (registerForm.get('year')?.dirty || registerForm.get('year')?.touched)">
+            <div class="alert" *ngIf="registerForm.get('year')?.errors!['required']">Year is required.</div>
+          </div>
+          <br /><br /><br>
+          <label for="submit"></label>
+          <button type="submit" name="submit" id="submit" [disabled]="registerForm.invalid" class="register-btn">REGISTER</button>
+          <br><br>
+          <label for="submit"></label>
+          <button  routerLink="/" class="register-btn">Back</button>
+        </fieldset>
+      </form>
+    </div>
+  </body>

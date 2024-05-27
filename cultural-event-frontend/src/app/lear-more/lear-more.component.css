@@ -1,0 +1,115 @@
+/* navbar */
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+.logo img {
+  width: 70px;
+  height: 70px;
+  border-radius: 41px;
+  outline: 4px solid red;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 3rem;
+  align-items: center;
+}
+
+.items {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.items a:link {
+  text-decoration: none;
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.items a:hover {
+  color: red;
+}
+
+.active {
+  color: red !important;
+}
+
+button {
+  font-size: 2rem;
+  padding: 0.6rem 1rem;
+  font-weight: bold;
+  color: white;
+  background: linear-gradient(to right, #c31432, #892211);
+  border-radius: 10px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  cursor: pointer;
+  border: none;
+}
+
+button:hover {
+  background: white;
+  outline: 1px solid red;
+  color: red;
+  border: none;
+}
+
+/* media queries */
+@media only screen and (max-width: 800px) {
+  .items {
+    display: none;
+  }
+  .row {
+    grid-template-columns: 1fr;
+  }
+  .learn-more {
+    align-self: start;
+    margin: 1rem 0px;
+  }
+}
+
+
+
+
+/* Body */
+  body{
+    background-image: url(https://static.vecteezy.com/system/resources/previews/022/398/723/large_2x/a-crowd-of-people-at-a-concert-crowd-of-people-dancing-on-dancefloor-generative-ai-free-photo.jpg);
+    background-size: cover;
+    height: 50rem;
+}
+  .centered-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: absolute;
+    margin-top: 10%;
+}
+
+h2{
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.card {
+    width: 50%;
+    padding: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    background-color: rgba(255,255,255,0.7);
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    transform: scale(1.05);
+    background-color: lightgray;
+}
+p{
+    font-family:cursive;
+}
+

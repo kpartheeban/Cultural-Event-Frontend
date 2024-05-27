@@ -1,0 +1,26 @@
+
+<table class="event-table" *ngIf="adminEvents.length>0">
+    <thead>
+      <tr>
+        <th>Event ID</th>
+        <th>Event Name</th>
+        <th>Venue</th>
+        <th>Description</th>
+        <th>Image</th>
+       
+        
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let event of adminEvents">
+        <td>{{ event.eventId }}</td>
+        <td>{{ event.eventName }}</td>
+        <td>{{ event.venue }}</td>
+        <td>{{ event.description }}</td>
+        <td><img src="event.image" alt="bbb"></td>
+        
+      </tr>
+    </tbody>
+  </table>
+  <br>
+  <button class="my-button" routerLink="/admin-dashboard">Back</button>
